@@ -6,10 +6,6 @@ class ForecastFacade
     @id = 1
   end
 
-  def current_temperature
-    service_response[:currently][:temperature]
-  end
-
   def forecast
     Forecast.new(service_response)
   end
