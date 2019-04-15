@@ -10,13 +10,11 @@ describe ForecastService do
 
     expect(service.get_forecast(lat_lon)).to be_a(Hash)
   end
-  #
-  # it '#get_json method returns json object which contains many key value pairs' do
-  #   service = ForecastService.new
-  #   response = service.get_json("Denver")
-  #
-  #   expect(response).to be_a(Hash)
-  #   expect(response).to have_key(:lat)
-  #   expect(response).to have_key(:lng)
-  # end
+
+  it '#get_json method returns json object which contains many key value pairs' do
+    service = ForecastService.new
+    response = service.get_json(-22.3193039, -65.8306389)
+
+    expect(response).to be_a(Hash)
+  end
 end

@@ -7,41 +7,14 @@ describe 'request to /api/v1/antipode with' do
 
     result = JSON.parse(response.body)
 
-
     expect(response).to be_successful
     expect(result).to be_a(Hash)
     expect(result).to have_key("data")
-
+    expect(result["data"]).to have_key("attributes")
+    expect(result["data"]["attributes"]).to have_key("location_name")
+    expect(result["data"]["attributes"]).to have_key("forecast")
+    expect(result["data"]["attributes"]).to have_key("search_location")
+    expect(result["data"]["attributes"]["forecast"]).to have_key("summary")
+    expect(result["data"]["attributes"]["forecast"]).to have_key("current_temperature")
   end
 end
-
-#
-# An antipode is the point on the planet that is diametrically opposite.
-#
-# You will create an endpoint like so:, `/api/v1/antipode?loc=hongkong`
-#
-# You will use the `Amypode API` to determine the antipode for Hong Kong.
-#
-# [`http://amypode.herokuapp.com/api/v1/antipodes?lat=27&long=-82`]
-#
-# This is a sample request. Amypode API requires header based authentication. It expects the  `api_key` header to be set to your key, which is `oscar_the_grouch`
-#
-# Your endpoint will give the user the original city, and the antipode’s location name and its current weather summary and current temperature in a format like this:
-#
-# ```
-# {
-#     "data": [
-#         {
-#             "id": "1",
-#             "type": "antipode",
-#             "attributes": {
-#                 "location_name": "Antipode City Name",
-#                 "forecast": {
-#                     "summary": "Mostly Cloudy,
-#                     "current_temperature": "72",
-#                 				},
-#             "search_location": "Hong Kong"
-#             }
-#         }
-#     ]
-# }

@@ -38,4 +38,11 @@ describe AntipodesFacade do
 
     expect(facade.get_amypode_location).to be_a(String)
   end
+
+  it '#get_amypode_forecast returns a forecast object' do
+    facade = AntipodesFacade.new("hongkong")
+
+    expect(facade.get_amypode_forecast).to be_a(Antipode)
+    expect(facade.get_amypode_forecast.search_location).to eq("hongkong")
+  end
 end
