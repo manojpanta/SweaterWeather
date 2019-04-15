@@ -9,7 +9,9 @@ describe 'request to /api/v1/antipode with' do
 
 
     expect(response).to be_successful
+    expect(result).to be_a(Hash)
     expect(result).to have_key("data")
+
   end
 end
 

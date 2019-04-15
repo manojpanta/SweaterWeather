@@ -11,7 +11,7 @@ class LatLonService
 
   def get_amypode_json(lat, lon)
     response = amypode_conn(lat,lon)
-    JSON.parse(response.body, symbolize_names: true)
+    JSON.parse(response.body, symbolize_names: true)[:results].first[:formatted_address]
   end
 
 
@@ -29,9 +29,8 @@ class LatLonService
   end
 
   def amypode_conn(lat,lon)
-    binding.pry
     Faraday.get('https://maps.googleapis.com/maps/api/geocode/json') do |faraday|
-      faraday.params['latlng'] =q "#{lat},#{lon}"
+      faraday.params['latlng'] = "#{lat},#{lon}"
       faraday.params['key'] = ENV['GEOCODING_API']
     end
   end
