@@ -1,8 +1,7 @@
 require 'rails_helper'
 describe 'request to /api/v1/forecast with' do
-  it 'address params returns forcast for the location' do
+  it 'address params returns forcast for the location', :vcr do
     location = "Denver"
-
     get "/api/v1/forecast?location=#{location}"
 
     result = JSON.parse(response.body)

@@ -17,6 +17,7 @@ require 'webmock/rspec'
    config.filter_sensitive_data('<FLICKR-KEY>') { ENV['FLICKR-KEY'] }
    config.filter_sensitive_data('<AMYPODE-API>') { ENV['AMYPODE-API'] }
  end
+
  def stub_get_json(url, filename)
    json_response = File.open('./spec/fixtures/'+ filename)
    stub_request(:get, url).

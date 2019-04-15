@@ -5,7 +5,7 @@ describe BackgroundService do
     expect(service).to be_a(BackgroundService)
   end
 
-  it '#get_background_image method returns response' do
+  it '#get_background_image method returns response', :vcr do
     location ="denver"
     service = BackgroundService.new
     expect(service.get_background_image(location)).to be_a(String)

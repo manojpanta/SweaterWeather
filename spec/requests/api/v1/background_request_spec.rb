@@ -1,6 +1,6 @@
 require 'rails_helper'
 describe 'request to /api/v1/backgrounds with' do
-  it 'address params returns background image ' do
+  it 'address params returns background image', :vcr do
     location = "Denver"
 
     get "/api/v1/backgrounds?location=#{location}"
