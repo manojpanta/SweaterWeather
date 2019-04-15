@@ -1,4 +1,5 @@
 class AmypodeService
+  
   def get_amypode(lat_lon_hash)
     get_json(lat_lon_hash[:lat], lat_lon_hash[:lng])[:data][:attributes]
   end

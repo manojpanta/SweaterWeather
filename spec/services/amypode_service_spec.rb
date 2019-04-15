@@ -12,6 +12,6 @@ describe AmypodeService do
 
   it '#get_amypode_location method returns a string' do
     service = AmypodeService.new
-    expect(service.get_amypode_location).to be_a(String)
+    expect(service.get_amypode({:lat => -22.3193039,:lng => -65.8306389})).to be_a(Hash)
   end
 end
