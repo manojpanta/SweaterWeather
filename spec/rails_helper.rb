@@ -5,6 +5,23 @@ require File.expand_path('../../config/environment', __FILE__)
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
+require 'vcr'
+require 'webmock/rspec'
+ VCR.configure do |config|
+   config.ignore_localhost = true
+   config.cassette_library_dir = 'spec/cassettes'
+   config.hook_into :webmock
+   config.configure_rspec_metadata!
+   config.filter_sensitive_data('<GEOCODING_API>') { ENV['GEOCODING_API'] }
+   config.filter_sensitive_data('<DARK-SKY-API-KEY>') { ENV['DARK-SKY-API-KEY'] }
+   config.filter_sensitive_data('<FLICKR-KEY>') { ENV['FLICKR-KEY'] }
+   config.filter_sensitive_data('<AMYPODE-API>') { ENV['AMYPODE-API'] }
+ end
+ def stub_get_json(url, filename)
+   json_response = File.open('./spec/fixtures/'+ filename)
+   stub_request(:get, url).
+   to_return(body: json_response, status: 200)
+ end
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in

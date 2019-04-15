@@ -7,7 +7,6 @@ describe 'request to /api/v1/forecast with' do
 
     result = JSON.parse(response.body)
 
-
     expect(response).to be_successful
     expect(result).to have_key("data")
   end

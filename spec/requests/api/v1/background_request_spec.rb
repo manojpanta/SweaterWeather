@@ -7,7 +7,7 @@ describe 'request to /api/v1/backgrounds with' do
 
     result = JSON.parse(response.body)
 
-
     expect(response).to be_successful
+    expect(result).to be_a(Hash)
   end
 end
