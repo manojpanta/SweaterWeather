@@ -1,8 +1,10 @@
 require 'faraday'
 class LatLonService
+
   def get_lat_lon(location)
     get_json(location)
   end
+
 
   def get_json(location)
     response = conn(location)
