@@ -6,12 +6,21 @@ class AntipodesFacade
     @id = 1
   end
 
-  def amypode_service
-    AmypodeService.new
+
+  def get_amypode
+    amypode_service.get_amypode(get_lat_lon)
+  end
+
+  def get_amypode_location
+    lat_lon_service.get_amypode_location(get_amypode)
   end
 
   def get_lat_lon
     lat_lon_service.get_lat_lon(@location)
+  end
+  
+  def amypode_service
+    AmypodeService.new
   end
 
   def lat_lon_service

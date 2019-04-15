@@ -24,4 +24,22 @@ describe AntipodesFacade do
     expect(facade.get_lat_lon).to have_key(:lat)
     expect(facade.get_lat_lon).to have_key(:lng)
   end
+
+  it '#get_amypode returns a amypode for a location' do
+    facade = AntipodesFacade.new("Denver")
+
+    expect(facade.get_amypode).to be_a(Amypode)
+  end
+
+  it '#get_amypode returns a amypode for a location' do
+    facade = AntipodesFacade.new("Denver")
+
+    expect(facade.get_amypode).to be_a(Amypode)
+  end
+
+  it '#get_amypode_location returns a amypode location' do
+    facade = AntipodesFacade.new("Denver")
+
+    expect(facade.get_amypode_location).to be_a(String)
+  end
 end
