@@ -2,7 +2,6 @@ class Antipode
   attr_reader :id,
               :location_name,
               :search_location
-
   def initialize(data, search_location, amypode_location)
     @id = 1
     @data = data
