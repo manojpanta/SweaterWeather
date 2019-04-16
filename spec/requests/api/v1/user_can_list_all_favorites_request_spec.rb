@@ -22,4 +22,24 @@ describe 'get request to api/v1/favorites', :type => :request do
     expect(result["data"].first["attributes"]).to have_key("daily_forecast")
     expect(result["data"].first["attributes"]).to have_key("hourly_forecast")
   end
+
+  it 'with a body having an invlaid api key can not list favorites ' do
+    WebMock.disable!
+    user = User.create(email: 'whatever@example.com',
+                password: "password",
+                api_key: "a1234b")
+
+    user.favorites.create(location: 'california')
+
+    params = { "api_key": "a1234bbjhsdbj" }##invalid
+    get '/api/v1/favorites', params: params, headers: {
+    'CONTENT_TYPE' => 'application/json', 'ACCEPT' => 'application/json'
+    }
+
+    result = JSON.parse(response.body)
+
+    expect(response).to_not be_successful
+    expect(response.status).to eq(401)
+    expect(result["error"]).to eq("Invalid API Key")
+  end
 end
