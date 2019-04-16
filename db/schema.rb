@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_16_171658) do
+ActiveRecord::Schema.define(version: 2019_04_16_191816) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,11 @@ ActiveRecord::Schema.define(version: 2019_04_16_171658) do
     t.string "email"
     t.string "password_digest"
     t.string "api_key"
+  end
+
+  create_table "weathers", force: :cascade do |t|
+    t.string "location"
+    t.string "weather_data"
   end
 
   add_foreign_key "favorites", "users"
