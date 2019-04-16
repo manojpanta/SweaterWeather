@@ -11,14 +11,7 @@ class ForecastFacade
   end
 
   def service_response
-    if location = BackgroundImage.find_by(location: @location)
-      hash = {}
-      hash[:lat] = location.lat
-      hash[:lng] = location.lon
-      hash
-    else
-      hash = lat_lon_service.get_lat_lon(@location)
-    end
-    @response ||= forecast_service.get_forecast(hash)
+    @lat_lon_hash ||= lat_lon_service.get_lat_lon(@location)
+    @response ||= forecast_service.get_forecast(@lat_lon_hash)
   end
 end

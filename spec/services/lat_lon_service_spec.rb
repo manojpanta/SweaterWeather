@@ -18,4 +18,15 @@ describe LatLonService do
     expect(response).to have_key(:lat)
     expect(response).to have_key(:lng)
   end
+
+  it '#get_lat_lon method does not make an api call if already in db'do
+  ##webmock not disabled , working without wifi
+    service = LatLonService.new
+    BackgroundImage.create(location: 'Denver', lat: 0.723, lon: -365.8)
+    response = service.get_lat_lon("Denver")
+
+    expect(response).to be_a(Hash)
+    expect(response).to have_key(:lat)
+    expect(response).to have_key(:lng)
+  end
 end
