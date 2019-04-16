@@ -1,6 +1,5 @@
 class Forecast
   attr_reader :id
-
   def initialize(data)
     @id = 4
     @data = data
@@ -57,7 +56,6 @@ class Forecast
   def highest_for_today
     @data[:daily][:data][0][:temperatureHigh].to_i
   end
-
 
   def lowest_for_today
     @data[:daily][:data][0][:temperatureLow].to_i

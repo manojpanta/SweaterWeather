@@ -3,14 +3,14 @@ describe 'delete request to api/v1/favorites', :type => :request do
   it 'with a body having an api key and a location deletes favorite for user' do
     WebMock.disable!
     user = User.create(email: 'whatever@example.com',
-                password: "password",
-                api_key: "a1234b")
+                       password: "password",
+                       api_key: "a1234b")
 
     user.favorites.create(location: 'california')
     user.favorites.create(location: 'denver')
     expect(user.favorites.count).to eq(2)
     params = { "api_key": "a1234b",
-                "location": "california"}
+               "location": "california"}
 
     delete '/api/v1/favorites', params: params.to_json, headers: {
     'CONTENT_TYPE' => 'application/json', 'ACCEPT' => 'application/json'
