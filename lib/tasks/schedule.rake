@@ -73,3 +73,5 @@ namespace :start do
     end
   end
 end
+# Time.at(JSON.parse(Weather.first.weather_data)["currently"]["time"])
+# JSON.parse(Weather.first.weather_data)["currently"]["time"]

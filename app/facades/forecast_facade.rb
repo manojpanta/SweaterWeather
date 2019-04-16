@@ -7,7 +7,11 @@ class ForecastFacade
   end
 
   def forecast
-    Forecast.new(service_response)
+    if weather = Weather.find_by(location: @location.downcase)
+      Forecast.new(JSON.parse(weather.weather_data, symbolize_names: true))
+    else
+      Forecast.new(service_response)
+    end
   end
 
   def service_response
