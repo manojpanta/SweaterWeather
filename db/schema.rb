@@ -10,10 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_15_235656) do
+ActiveRecord::Schema.define(version: 2019_04_16_165626) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "background_images", force: :cascade do |t|
+    t.string "location"
+    t.string "image_url"
+  end
 
   create_table "favorites", force: :cascade do |t|
     t.string "location"
