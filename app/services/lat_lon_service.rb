@@ -18,7 +18,6 @@ class LatLonService
     Faraday.new(url: 'https://maps.googleapis.com/maps/api/geocode/json') do |faraday|
       faraday.adapter Faraday.default_adapter
     end
-    
   end
 
   # def get_amypode_json(lat, lon)

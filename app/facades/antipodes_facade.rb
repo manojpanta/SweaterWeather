@@ -1,4 +1,5 @@
 class AntipodesFacade
+  include BaseFacade
   def initialize(location)
     @location = location
   end
@@ -21,17 +22,5 @@ class AntipodesFacade
 
   def get_lat_lon
     lat_lon_service.get_lat_lon(@location)
-  end
-
-  def amypode_service
-    AmypodeService.new
-  end
-
-  def lat_lon_service
-    LatLonService.new
-  end
-
-  def forecast_service
-    ForecastService.new
   end
 end
