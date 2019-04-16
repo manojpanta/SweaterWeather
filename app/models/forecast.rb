@@ -15,7 +15,7 @@ class Forecast
   end
 
   def location
-    @data[:timezone].split("/").slice!(1) << ", United States"
+    @data[:timezone].split("/").slice!(1) << ", "<< @data[:timezone].split("/").slice!(0)
   end
 
   def current_temperature
