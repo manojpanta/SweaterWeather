@@ -1,7 +1,6 @@
 require 'rails_helper'
 describe 'post request to api/v1/favorites', :type => :request do
-  it 'with a body having api_key and location name can favorite places' do
-    WebMock.disable!
+  it 'with a body having api_key and location name can favorite places', :vcr do
     user = User.create(email: 'manoj', password: 'this', api_key:'abchb')
 
     body = { "location": "Denver",
@@ -19,7 +18,6 @@ describe 'post request to api/v1/favorites', :type => :request do
   end
 
   it 'with body having invalid api_key and location can not favorite places' do
-    WebMock.disable!
     user = User.create(email: 'manoj', password: 'this', api_key:'abchb')
 
     body = { "location": "Denver",

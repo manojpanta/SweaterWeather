@@ -1,7 +1,6 @@
 require 'rails_helper'
 describe 'get request to api/v1/favorites', :type => :request do
-  it 'with a body having an api key can list favorites of apikey user' do
-    WebMock.disable!
+  it 'with a body having an api key can list favorites of apikey user', :vcr do
     user = User.create(email: 'whatever@example.com',
                 password: "password",
                 api_key: "a1234b")

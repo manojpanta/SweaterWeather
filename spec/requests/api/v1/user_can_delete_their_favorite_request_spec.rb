@@ -1,7 +1,6 @@
 require 'rails_helper'
 describe 'delete request to api/v1/favorites', :type => :request do
-  it 'with a body having an api key and a location deletes favorite for user' do
-    WebMock.disable!
+  it 'with a body having an api key and a location deletes favorite for user', :vcr do
     user = User.create(email: 'whatever@example.com',
                        password: "password",
                        api_key: "a1234b")
@@ -29,7 +28,6 @@ describe 'delete request to api/v1/favorites', :type => :request do
   end
 
   it 'with invlaid api key and a location can not delete favorite for user' do
-    WebMock.disable!
     user = User.create(email: 'whatever@example.com',
                        password: "password",
                        api_key: "a1234b")
