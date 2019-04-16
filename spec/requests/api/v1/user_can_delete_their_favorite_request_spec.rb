@@ -17,11 +17,11 @@ describe 'delete request to api/v1/favorites', :type => :request do
     }
 
     result = JSON.parse(response.body)
-    binding.pry
 
     expect(response).to be_successful
     expect(response.status).to eq(200)
     expect(result).to be_a(Hash)
+    expect(user.favorites.count).to eq(1)
     expect(result["data"].count).to eq(1)
     expect(result["data"].first["attributes"]).to have_key("location")
     expect(result["data"].first["attributes"]).to have_key("daily_forecast")
