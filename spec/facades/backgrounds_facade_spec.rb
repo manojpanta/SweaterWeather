@@ -4,10 +4,10 @@ describe BackgroundsFacade do
     facade = BackgroundsFacade.new("location")
     expect(facade).to be_a(BackgroundsFacade)
   end
-  
+
   it 'service method returns background service' do
     facade = BackgroundsFacade.new("location")
-    expect(facade.service ).to be_a(BackgroundService)
+    expect(facade.background_service ).to be_a(BackgroundService)
   end
 
   it '#background_image method returns background_image', :vcr do

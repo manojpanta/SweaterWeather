@@ -44,6 +44,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'launchy'
   gem 'capybara'
+  gem 'rubocop', require: false
 end
 
 group :development do

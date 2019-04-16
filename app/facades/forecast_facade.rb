@@ -1,6 +1,6 @@
 class ForecastFacade
+  include BaseService
   attr_reader :location, :id
-  
   def initialize(location)
     @location = location
     @id = 1
@@ -13,13 +13,5 @@ class ForecastFacade
   def service_response
     @lat_lon ||= lat_lon_service.get_lat_lon(@location)
     @response ||= forecast_service.get_forecast(@lat_lon)
-  end
-
-  def lat_lon_service
-    LatLonService.new
-  end
-
-  def forecast_service
-    ForecastService.new
   end
 end

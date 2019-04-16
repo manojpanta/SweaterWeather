@@ -1,4 +1,5 @@
 class FavoritesFacade
+  include BaseService
   attr_reader :id
   def initialize(user)
     @user = user
@@ -11,18 +12,8 @@ class FavoritesFacade
     end
   end
 
-
-
   def service_response(location)
     @lat_lon = lat_lon_service.get_lat_lon(location)
     @response = forecast_service.get_forecast(@lat_lon)
-  end
-
-  def lat_lon_service
-    LatLonService.new
-  end
-
-  def forecast_service
-    ForecastService.new
   end
 end
