@@ -12,10 +12,11 @@ describe LatLonService do
 
   it '#get_json method returns json object which contains many key value pairs' do
     service = LatLonService.new
-    response = service.get_json("Denver")
+    location = "denver"
+    response = service.get_json("?address=#{location}&key=#{ENV['GEOCODING_API']}")
 
     expect(response).to be_a(Hash)
-    expect(response).to have_key(:lat)
-    expect(response).to have_key(:lng)
+    expect(response[:results].first[:geometry][:location]).to have_key(:lat)
+    expect(response[:results].first[:geometry][:location]).to have_key(:lng)
   end
 end
