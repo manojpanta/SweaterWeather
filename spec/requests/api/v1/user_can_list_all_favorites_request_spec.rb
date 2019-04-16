@@ -6,8 +6,8 @@ describe 'get request to api/v1/favorites', :type => :request do
                 password: "password",
                 api_key: "a1234b")
 
-    body = { "api_key": "a1234b" }
-    get '/api/v1/favorites', params: body.to_json, headers: {
+    params = { "api_key": "a1234b" }
+    get '/api/v1/favorites', params: params, headers: {
     'CONTENT_TYPE' => 'application/json', 'ACCEPT' => 'application/json'
     }
 
