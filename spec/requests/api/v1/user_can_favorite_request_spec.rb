@@ -17,4 +17,22 @@ describe 'post request to api/v1/favorites', :type => :request do
     expect(result).to have_key("success")
     expect(user.favorites.last.location).to eq("Denver")
   end
+
+  it 'with body having invalid api_key and location can not favorite places' do
+    WebMock.disable!
+    user = User.create(email: 'manoj', password: 'this', api_key:'abchb')
+
+    body = { "location": "Denver",
+             "api_key": "abchbaaaa"##invalid
+            }
+    post '/api/v1/favorites', params: body.to_json, headers: { 'CONTENT_TYPE' => 'application/json', 'ACCEPT' => 'application/json' }
+
+    result = JSON.parse(response.body)
+
+
+    expect(response).to_not be_successful
+    expect(response.status).to eq(401)
+    expect(result["error"]).to eq("Invalid API Key")
+    expect(user.favorites.count).to eq(0)
+  end
 end

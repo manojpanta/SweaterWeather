@@ -5,7 +5,7 @@ class Api::V1::FavoritesController  < ApplicationController
     if user = User.find_by(api_key: api_key)
       render json: ForecastSerializer.new(FavoritesFacade.new(user).favorites), status: 200
     else
-      render json: {error: 'Invalid API key' }, status: 401
+      render json: {error: 'Invalid API Key' }, status: 401
     end
   end
 
@@ -16,7 +16,7 @@ class Api::V1::FavoritesController  < ApplicationController
        user.favorites.create(location: "#{body["location"]}")
        render json: {success: "Favorited `#{body["location"]}`"}
     else
-      render json: {error: 'Invalid API key'}, status: 401
+      render json: {error: 'Invalid API Key'}, status: 401
     end
   end
 
