@@ -3,6 +3,8 @@ class BackgroundService
     get_json(location)[:photos][:photo].shuffle[0][:url_l]
   end
 
+  private
+
   def get_json(location)
     response = conn(location)
     JSON.parse(response.body, symbolize_names: true)

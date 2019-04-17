@@ -13,7 +13,7 @@ class FavoritesFacade
   end
 
   def service_response(location)
-    @lat_lon = lat_lon_service.get_lat_lon(location)
-    @response = forecast_service.get_forecast(@lat_lon)
+    lat_lon = lat_lon_service.get_lat_lon(location)
+    forecast_service.get_forecast(lat_lon)
   end
 end

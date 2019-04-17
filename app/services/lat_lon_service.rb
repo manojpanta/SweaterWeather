@@ -7,6 +7,8 @@ class LatLonService
     end
     {:lat=> image.lat, :lng=> image.lon}
   end
+  
+  private
 
   def get_json(location)
     response = conn(location)

@@ -3,6 +3,8 @@ class ForecastService
     get_json(lat_lon[:lat], lat_lon[:lng])
   end
 
+  private
+  
   def get_json(lat,lon)
     response = conn(lat,lon)
     JSON.parse(response.body, symbolize_names: true)
