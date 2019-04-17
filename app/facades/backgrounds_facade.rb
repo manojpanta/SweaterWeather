@@ -6,10 +6,10 @@ class BackgroundsFacade
 
   def background_image
     url = background_service.get_background_image(@location)
-    while url.class != String
+    until  url.class == String do
       url = background_service.get_background_image(@location)
     end
-    result = lat_lon_service.get_lat_lon(@location)
+    result = lat_lon_service.get_lat_lon(@location, url)
     BackgroundImage.create(image_url: url, location: @location.downcase, lat: result[:lat], lon: result[:lng])
   end
 end
