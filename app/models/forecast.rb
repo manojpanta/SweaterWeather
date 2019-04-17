@@ -7,7 +7,7 @@ class Forecast
   end
 
   def time_now
-    Time.now.strftime("%I:%M %p")
+    Time.now.in_time_zone(@data[:timezone]).strftime("%I:%M %p")
     # Time.at(@data[:currently][:time]).strftime("%I:%M %p")
   end
 
