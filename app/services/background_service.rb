@@ -13,7 +13,7 @@ class BackgroundService
   def conn(location)
     Faraday.get("https://api.flickr.com/services/rest") do |faraday|
       faraday.params["api_key"] = ENV['FLICKR-KEY']
-      faraday.params["tags"] = location
+      faraday.params["tags"] = "#{location},#{location} museum, #{location} parks, #{location} cityhall, #{location} downtown"
       faraday.params["accuracy"] = "11"
       faraday.params["per_page"] = "10"
       faraday.params["method"] = "flickr.photos.search"
