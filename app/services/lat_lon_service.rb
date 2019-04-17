@@ -7,12 +7,6 @@ class LatLonService
       BackgroundImage.create(location: location, lat: a[:lat], lon: a[:lng])
       a
     end
-    # image  = BackgroundImage.find_or_create_by(location: location.downcase) do |i|
-    #   json = get_json(location)
-    #   i.lat = json[:lat]
-    #   i.lon = json[:lng]
-    # end
-    # {:lat=> image.lat, :lng=> image.lon}
   end
 
   private
