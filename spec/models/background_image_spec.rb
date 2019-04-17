@@ -6,7 +6,13 @@ describe BackgroundImage do
   end
 
   it '#instance methods' do
-    image = BackgroundImage.new(location: 'location')
+    image = BackgroundImage.new(location: 'location',
+                                image_url: 'url',
+                                lat: 33.44,
+                                lon: 33.3)
     expect(image.location).to eq("location")
+    expect(image.image_url).to eq("url")
+    expect(image.lat).to eq(33.44)
+    expect(image.lon).to eq(33.3)
   end
 end
