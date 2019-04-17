@@ -1,12 +1,13 @@
 class LatLonService
   def get_lat_lon(location)
-    if image = BackgroundImage.find_by(location: location.downcase)
-      {:lat=> image.lat, :lng=> image.lon}
-    else
-      a = get_json(location)
-      BackgroundImage.create(location: location, lat: a[:lat], lon: a[:lng])
-      a
-    end
+    # if image = BackgroundImage.find_by(location: location.downcase)
+    #   {:lat=> image.lat, :lng=> image.lon}
+    # else
+    #   a = get_json(location)
+    #   BackgroundImage.create(location: location, lat: a[:lat], lon: a[:lng])
+    #   a
+    # end
+    get_json(location)
   end
 
   private
