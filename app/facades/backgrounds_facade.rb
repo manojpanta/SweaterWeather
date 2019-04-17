@@ -6,7 +6,7 @@ class BackgroundsFacade
 
   def background_image
     url = background_service.get_background_image(@location)
-    until  url.class == String do
+    until  url.class == String && url.class != '' do
       url = background_service.get_background_image(@location)
     end
     result = lat_lon_service.get_lat_lon(@location, url)

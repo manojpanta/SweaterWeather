@@ -7,7 +7,6 @@ class LatLonService
       BackgroundImage.create(location: loc, lat: a[:lat], lon: a[:lng], image_url: url)
       a
     end
-    # get_json(location)
   end
 
   private
