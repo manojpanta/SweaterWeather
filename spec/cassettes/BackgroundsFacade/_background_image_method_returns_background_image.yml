@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.flickr.com/services/rest?accuracy=11&api_key=<FLICKR-KEY>&content_type=1&extras=url_l&format=json&media=photos&method=flickr.photos.search&nojsoncallback=true&per_page=10&tags=location
+    uri: https://api.flickr.com/services/rest?accuracy=11&api_key=<FLICKR-KEY>&content_type=1&extras=url_l&format=json&media=photos&method=flickr.photos.search&nojsoncallback=true&per_page=10&tags=location,location%20museum,%20location%20parks,%20location%20cityhall,%20location%20downtown
     body:
       encoding: US-ASCII
       string: ''
@@ -19,11 +19,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 17 Apr 2019 17:50:51 GMT
+      - Wed, 17 Apr 2019 18:33:06 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '667'
+      - '706'
       P3p:
       - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
         DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
@@ -31,13 +31,13 @@ http_interactions:
       Cache-Control:
       - private
       X-Served-By:
-      - www320.flickr.bf1.yahoo.com
+      - www293.flickr.bf1.yahoo.com
       X-Frame-Options:
       - SAMEORIGIN
       Vary:
       - Accept-Encoding
       Age:
-      - '2'
+      - '0'
       Server:
       - ATS
       Referrer-Policy:
@@ -61,17 +61,17 @@ http_interactions:
         report-uri="http://csp.yahoo.com/beacon/csp?src=yahoocom-hpkp-report-only"
     body:
       encoding: ASCII-8BIT
-      string: '{"photos":{"page":1,"pages":29216,"perpage":10,"total":"292160","photo":[{"id":"47630674471","owner":"99090089@N03","secret":"be061362f3","server":"65535","farm":66,"title":"4-mile
+      string: '{"photos":{"page":1,"pages":29238,"perpage":10,"total":"292379","photo":[{"id":"33753702518","owner":"91204073@N02","secret":"c368f3d98f","server":"65535","farm":66,"title":"37219
+        ''Jonty Jarvis''","ispublic":1,"isfriend":0,"isfamily":0,"url_l":"https:\/\/live.staticflickr.com\/65535\/33753702518_c368f3d98f_b.jpg","height_l":"768","width_l":"1024"},{"id":"32688453967","owner":"10089490@N06","secret":"b452981ee0","server":"65535","farm":66,"title":"Cherry
+        blossom scene in Preston","ispublic":1,"isfriend":0,"isfamily":0,"url_l":"https:\/\/live.staticflickr.com\/65535\/32688453967_b452981ee0_b.jpg","height_l":"750","width_l":"1024"},{"id":"47578146912","owner":"10089490@N06","secret":"f608ea4ec4","server":"65535","farm":66,"title":"Cherry
+        blossom scene in Preston","ispublic":1,"isfriend":0,"isfamily":0,"url_l":"https:\/\/live.staticflickr.com\/65535\/47578146912_f608ea4ec4_b.jpg","height_l":"683","width_l":"1024"},{"id":"33753568788","owner":"68466173@N02","secret":"5318cd90d6","server":"65535","farm":66,"title":"Rock
+        Bunting (Emberiza cia)","ispublic":1,"isfriend":0,"isfamily":0,"url_l":"https:\/\/live.staticflickr.com\/65535\/33753568788_5318cd90d6_b.jpg","height_l":"768","width_l":"1024"},{"id":"33753562998","owner":"68466173@N02","secret":"30dd64a9be","server":"65535","farm":66,"title":"Rufous-naped
+        Tit (Periparus rufonuchalis)","ispublic":1,"isfriend":0,"isfamily":0,"url_l":"https:\/\/live.staticflickr.com\/65535\/33753562998_30dd64a9be_b.jpg","height_l":"768","width_l":"1024"},{"id":"33753555598","owner":"68466173@N02","secret":"163ea29c21","server":"65535","farm":66,"title":"Hill
+        Pigeon (Columba rupestris)","ispublic":1,"isfriend":0,"isfamily":0,"url_l":"https:\/\/live.staticflickr.com\/65535\/33753555598_163ea29c21_b.jpg","height_l":"768","width_l":"1024"},{"id":"47578078952","owner":"68466173@N02","secret":"d29c1f7853","server":"65535","farm":66,"title":"Booted
+        Eagle (Hieraaetus pennatus)","ispublic":1,"isfriend":0,"isfamily":0,"url_l":"https:\/\/live.staticflickr.com\/65535\/47578078952_d29c1f7853_b.jpg","height_l":"768","width_l":"1024"},{"id":"47630674471","owner":"99090089@N03","secret":"be061362f3","server":"65535","farm":66,"title":"4-mile
         landscape","ispublic":1,"isfriend":0,"isfamily":0,"url_l":"https:\/\/live.staticflickr.com\/65535\/47630674471_be061362f3_b.jpg","height_l":"507","width_l":"1024"},{"id":"46715155355","owner":"99090089@N03","secret":"f3c3f98e24","server":"65535","farm":66,"title":"Cactus
         fur","ispublic":1,"isfriend":0,"isfamily":0,"url_l":"https:\/\/live.staticflickr.com\/65535\/46715155355_f3c3f98e24_b.jpg","height_l":"683","width_l":"1024"},{"id":"46906450604","owner":"99090089@N03","secret":"3fdbda8374","server":"65535","farm":66,"title":"Cactus
-        flowers","ispublic":1,"isfriend":0,"isfamily":0,"url_l":"https:\/\/live.staticflickr.com\/65535\/46906450604_3fdbda8374_b.jpg","height_l":"683","width_l":"1024"},{"id":"33753384278","owner":"99090089@N03","secret":"18d4d525d5","server":"65535","farm":66,"title":"Joshua
-        Tree Portrait","ispublic":1,"isfriend":0,"isfamily":0,"url_l":"https:\/\/live.staticflickr.com\/65535\/33753384278_18d4d525d5_b.jpg","height_l":"683","width_l":"1024"},{"id":"47630664261","owner":"99090089@N03","secret":"5baa0c3218","server":"65535","farm":66,"title":"Channeling
-        Monet","ispublic":1,"isfriend":0,"isfamily":0,"url_l":"https:\/\/live.staticflickr.com\/65535\/47630664261_5baa0c3218_b.jpg","height_l":"683","width_l":"1024"},{"id":"46715139455","owner":"99090089@N03","secret":"83d4ee1094","server":"65535","farm":66,"title":"Tied
-        up","ispublic":1,"isfriend":0,"isfamily":0,"url_l":"https:\/\/live.staticflickr.com\/65535\/46715139455_83d4ee1094_b.jpg","height_l":"683","width_l":"1024"},{"id":"46906411714","owner":"10089490@N06","secret":"0e6feda97e","server":"65535","farm":66,"title":"Bowker
-        Harley-Davidson, Strand Road, Preston","ispublic":1,"isfriend":0,"isfamily":0,"url_l":"https:\/\/live.staticflickr.com\/65535\/46906411714_0e6feda97e_b.jpg","height_l":"728","width_l":"1024"},{"id":"32688170407","owner":"10089490@N06","secret":"abd3c52757","server":"65535","farm":66,"title":"53
-        Degrees venue in Preston","ispublic":1,"isfriend":0,"isfamily":0,"url_l":"https:\/\/live.staticflickr.com\/65535\/32688170407_abd3c52757_b.jpg","height_l":"657","width_l":"1024"},{"id":"46715088745","owner":"10089490@N06","secret":"0de6b70442","server":"65535","farm":66,"title":"Lidl
-        West Strand Preston","ispublic":1,"isfriend":0,"isfamily":0,"url_l":"https:\/\/live.staticflickr.com\/65535\/46715088745_0de6b70442_b.jpg","height_l":"643","width_l":"1024"},{"id":"40664186003","owner":"10089490@N06","secret":"444414187e","server":"65535","farm":66,"title":"Hot
-        potato van in Preston","ispublic":1,"isfriend":0,"isfamily":0,"url_l":"https:\/\/live.staticflickr.com\/65535\/40664186003_444414187e_b.jpg","height_l":"698","width_l":"1024"}]},"stat":"ok"}'
+        flowers","ispublic":1,"isfriend":0,"isfamily":0,"url_l":"https:\/\/live.staticflickr.com\/65535\/46906450604_3fdbda8374_b.jpg","height_l":"683","width_l":"1024"}]},"stat":"ok"}'
     http_version: 
-  recorded_at: Wed, 17 Apr 2019 17:50:45 GMT
+  recorded_at: Wed, 17 Apr 2019 18:33:00 GMT
 recorded_with: VCR 4.0.0
