@@ -1,4 +1,4 @@
-every 100.minute do
+every 1.minute do
   rake "start:running"
   command "/usr/bin/my_great_command"
 end

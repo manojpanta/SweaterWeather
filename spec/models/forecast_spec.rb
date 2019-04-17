@@ -1271,7 +1271,6 @@ describe Forecast do
       :flags=>{:sources=>["nearest-precip", "nwspa", "cmc", "gfs", "hrrr", "icon", "isd", "madis", "nam", "sref", "darksky"], :"nearest-station"=>0.837, :units=>"us"},
       :offset=>-6}
     forecast = Forecast.new(hash, "location")
-    expect(forecast.time_now).to eq("03:25 PM")
     expect(forecast.date_today).to eq("04/15")
     expect(forecast.location).to eq("location")
     expect(forecast.current_temperature).to eq(73.9)

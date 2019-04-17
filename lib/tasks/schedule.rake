@@ -18,7 +18,6 @@ cities = [ "New York",
            "El Paso",
            "Memphis",
            "Seattle",
-           "Denver",
            "Washington",
            "Boston",
            "Nashville-Davidson",
@@ -67,7 +66,7 @@ namespace :start do
   desc :"starting now"
   task :running => :environment do
     cities.each do |city|
-      weather = Weather.find_or_create_by(location: city.downcase) do |w|#, weather_data: ForecastFacade.new(city).service_response.to_json)
+      weather = Weather.find_or_create_by(location: city.downcase) do |w|
       end
       weather.update(weather_data: ForecastFacade.new(city).service_response.to_json)
     end
