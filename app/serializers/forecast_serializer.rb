@@ -1,12 +1,16 @@
 class ForecastSerializer
   include FastJsonapi::ObjectSerializer
-  
+
   attribute :location do |object|
     object.location
   end
 
   attribute :current_temperature do |object|
     object.current_temperature
+  end
+
+  attribute :feels_like do |object|
+    object.feels_like
   end
 
   attribute :time_now do |object|
@@ -37,10 +41,18 @@ class ForecastSerializer
     object.uvindex
   end
 
-  attribute :summary do |object|
+  attribute :now_summary do |object|
     object.summary
   end
 
+  attribute :today_summary do |object|
+    object.today_summary
+  end
+
+  attribute :tonight_summary do |object|
+    object.tonight_summary
+  end
+  
   attribute :weekly_summary do |object|
     object.weekly_summary
   end

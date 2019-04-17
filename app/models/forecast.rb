@@ -38,6 +38,18 @@ class Forecast
     @data[:currently][:summary]
   end
 
+  def today_summary
+    @data[:daily][:data].first[:summary]
+  end
+
+  def tonight_summary
+    @data[:hourly][:data].first[:summary]
+  end
+
+  def feels_like
+    @data[:currently][:apparentTemperature].to_i
+  end
+
   def weekly_summary
     @data[:daily][:summary]
   end

@@ -17,7 +17,7 @@ describe 'request to /api/v1/forecast with' do
     expect(result["data"]["attributes"]).to have_key("humidity")
     expect(result["data"]["attributes"]).to have_key("visibility")
     expect(result["data"]["attributes"]).to have_key("uvindex")
-    expect(result["data"]["attributes"]).to have_key("summary")
+    expect(result["data"]["attributes"]).to have_key("now_summary")
     expect(result["data"]["attributes"]).to have_key("weekly_summary")
 
     expect(result["data"]["attributes"]).to have_key("daily_forecast")
@@ -57,7 +57,6 @@ describe 'request to /api/v1/forecast with' do
     expect(result["data"]["attributes"]).to have_key("humidity")
     expect(result["data"]["attributes"]).to have_key("visibility")
     expect(result["data"]["attributes"]).to have_key("uvindex")
-    expect(result["data"]["attributes"]).to have_key("summary")
     expect(result["data"]["attributes"]).to have_key("weekly_summary")
 
     expect(result["data"]["attributes"]).to have_key("daily_forecast")

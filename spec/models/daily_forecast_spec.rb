@@ -53,5 +53,6 @@ describe DailyForecast do
    expect(forecast.high).to eq(74.45)
    expect(forecast.low).to eq(44.97)
    expect(forecast.humidity).to eq("28%")
+   expect(forecast.precipitation).to eq("2 %")
   end
 end
