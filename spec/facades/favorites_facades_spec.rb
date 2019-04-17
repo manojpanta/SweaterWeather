@@ -14,7 +14,6 @@ describe FavoritesFacade do
     user.favorites.create(location: 'denver')
     facade = FavoritesFacade.new(user)
 
-
     expect(facade.favorites).to be_a(Array)
     expect(facade.favorites[0]).to be_a(Forecast)
   end

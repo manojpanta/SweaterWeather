@@ -8,7 +8,7 @@ class FavoritesFacade
 
   def favorites
     @user.favorites.map do |location|
-      Forecast.new(service_response(location.location))
+      Forecast.new(service_response(location.location), location.location)
     end
   end
 

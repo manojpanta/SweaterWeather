@@ -1,7 +1,7 @@
 require 'rails_helper'
 describe Forecast do
   it 'exists' do
-    forecast = Forecast.new({})
+    forecast = Forecast.new({}, "location")
     expect(forecast).to be_a(Forecast)
   end
   it '#instance methods' do
@@ -1270,10 +1270,10 @@ describe Forecast do
       :apparentTemperatureMaxTime=>1555974000}]},
       :flags=>{:sources=>["nearest-precip", "nwspa", "cmc", "gfs", "hrrr", "icon", "isd", "madis", "nam", "sref", "darksky"], :"nearest-station"=>0.837, :units=>"us"},
       :offset=>-6}
-    forecast = Forecast.new(hash)
+    forecast = Forecast.new(hash, "location")
     expect(forecast.time_now).to eq("03:25 PM")
     expect(forecast.date_today).to eq("04/15")
-    expect(forecast.location).to eq("Denver, America")
+    expect(forecast.location).to eq("location")
     expect(forecast.current_temperature).to eq(73.9)
     expect(forecast.humidity).to eq(15.0)
     expect(forecast.visibility).to eq(6.66)

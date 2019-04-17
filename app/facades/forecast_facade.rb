@@ -8,9 +8,9 @@ class ForecastFacade
 
   def forecast
     if weather = Weather.find_by(location: @location.downcase)
-      Forecast.new(JSON.parse(weather.weather_data, symbolize_names: true))
+      Forecast.new(JSON.parse(weather.weather_data, symbolize_names: true), weather.location)
     else
-      Forecast.new(service_response)
+      Forecast.new(service_response, @location)
     end
   end
 

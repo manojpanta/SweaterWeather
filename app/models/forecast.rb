@@ -1,6 +1,7 @@
 class Forecast
   attr_reader :id
-  def initialize(data)
+  def initialize(data, location)
+    @location = location
     @id = 4
     @data = data
   end
@@ -14,7 +15,7 @@ class Forecast
   end
 
   def location
-    @data[:timezone].split("/").slice!(1) << ", "<< @data[:timezone].split("/").slice!(0)
+    @location
   end
 
   def current_temperature
