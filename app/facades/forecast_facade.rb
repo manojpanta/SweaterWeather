@@ -7,7 +7,6 @@ class ForecastFacade
   end
 
   def forecast
-    binding.pry
     if weather = Weather.find_by(location: @location.downcase)
       Forecast.new(JSON.parse(weather.weather_data, symbolize_names: true), weather.location)
     else
