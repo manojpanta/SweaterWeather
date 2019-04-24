@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "clearvision-238504",
+  "private_key_id": "bdb02196bd48c1460a8a9dbe52f99890930f97b3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDPr+woxUfPZsUY\n3wI06Tyq34a3JDHNFruDDz5exbtcHPMIKDFwy5FteDXc1JaSO3IxEXWgedoJPDrW\n+imLFWyJoyxpy7sRpY9DORsluw+ox5NbwHOC6RA4tvtRzvLgG3XehCPHwhjmDOGw\nv/vy3D493kRqLUpGm4/bFlnRbB2KqiISIyndlLyl49wCdSztcjaMVVC4CeJiZiOI\nZux0xA9uxQnPesVfihXTZnE7ZXAhDE8ug/dIVwBryS+mBpS90TZHWsW1QnLIwRkH\n7f1hPVDzEIrR1dnAUE9i/Pcg/ghaq2y6PTKdrO5TNxkZNY8YM7MRBCNAeThouWAO\n1qQB5RYBAgMBAAECggEAAT4VcjH/SbxHlMGYIbO9L0Lalg5ooN2QXh/xeNTYgobR\nemdD0nUD/U0Wj2gTMDPxrTL5n+3oB3Ly4YCKI+ugebCo+PIP1V1xnmPr/RK3LNno\nJbNLTZ7HgCYHb2LG/Qm/r7GH2u+sQUtq7z6FdfC/i5Rgluex9dBY8OUw64nozFX7\no3MkEvdSKeYjijEqUIL8jDv2X1moFuDJuOVko5vtubyQvidVjUkDPSQvBZatBvni\nB8JixoPZXsh//dfuky2VA5AxfIvfHSKvrtqXne4mUQ+DprNI5A+VNZ6DHthiaD+7\ngY1H83qZ+XNT4vSD3DQChsOesGP9jNxmF2IJTKUfUQKBgQD03X84him/q6QFxmlo\nd2FwdJL6N/pLQWKGAPxS2rTG/cAoZrNU+OsakfOQzsSLQxVzF9TtNpzfmu0Xwaa2\ndOYGrgaL8+cDnbBrQog+y8sjwj6MxlAcjYu0iSVYFSGI+af7KFQ+zdf7ur2wG+35\ntoyxvUJrnl+HGN2ZWUxfAjz42QKBgQDZIaHOH2O4qG/B/t0iNAhbFkiNd9NzvVw9\nDF+/2cjEOcQXZ4gidj+/d5VEJMlojKASPiGor29xh1PVgUn+iF4HgzZEexjy/+Ka\nX/XXfSsQfPEV5lkCPKImY9hV2U+gwRCpezJZjWrE90b4LPPpkyRFUwIde3X04K1l\nPV+aCEANaQKBgQCk1IVTM1zfHVdoW8uQ+uuom5Bkx1HBXt5HflpcG8UdPqsfhyKo\nzHbWh/EBRW6goCPMOfqnQ+AN1WhMWZszrzU4weS+SQz1Li0Xxs2YF+9CvvsEIGrF\nDbNBcCCnTnIoloYxV1B+hmohle8ioWpscin7a39OmmmLs31YQPhb7FHG4QKBgHsX\njuQMdXr8ugaPVouKVeZVdqIEeTJW+lB9kFZxv1hGqzzda5al1LPVtiAgfrGvbxuI\nb4pykkoY/tS969XJNw0pPH2MD3PKzorXtcYI5n39ZqsUoAcdmosK9VyNyo+Gg8yg\n08Vi31F0IZ6V1VzoFpraWQufrxo4uPP43Ba1cKJpAoGBAL+jxWbL3SUiX1YIu8xx\nn2BDYVNfCsJrbKPUMEullsCTZU2JDe+NaBIhEqgOemygB2LH+Yv2S1tPvZ0Mb8vg\nBIkTS38ajw4pSy4DN64DVdjAjaJYnTUrmdUfnnaY0T+REvO/8L30rtlAr9vdURDe\nfz2XK94mpNHPdKdIqgod3j9I\n-----END PRIVATE KEY-----\n",
+  "client_email": "clear-vision-manoj@clearvision-238504.iam.gserviceaccount.com",
+  "client_id": "107904466705101281783",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/clear-vision-manoj%40clearvision-238504.iam.gserviceaccount.com"
+}
