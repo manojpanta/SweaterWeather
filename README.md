@@ -1,7 +1,6 @@
 # SweaterWeather
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+SweaterWeather is an API service that is intended to work as the backend for an weather app that requires almost everything we can get from yahoo weather: https://www.yahoo.com/news/weather 
 
 Things you may want to cover:
 
