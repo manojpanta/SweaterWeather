@@ -42,13 +42,12 @@ The following example requests sign up to the SweaterWeather API.
    "password": "password",
    "password_confirmation": "password"
  }
- 
  ```
 After a successful request for sign up, You will get an API key.   
 Sample response, in JSON:  
 ```
 { 
-  "api_key": "jgn983hy48thw9begh98h4539h4", <br />
+  "api_key": "jgn983hy48thw9begh98h4539h4"
 }
 ```
 
@@ -63,13 +62,12 @@ And the body must contain emil, passwordlike below:
   "email": "whatever@example.com",
   "password": "password"
 }
-
 ```
 If your request is approved, you will see your API key within the response.  
 Sample response, in JSON:  
 ```
 {
-  "api_key": "jgn983hy48thw9begh98h4539h4",
+  "api_key": "jgn983hy48thw9begh98h4539h4"
 }
 ```
 ## Favoriting Locations
@@ -90,7 +88,6 @@ Sample response, in JSON:
 {
     "success": "Favorited `Denver, CO`"
 }
-
 ```
 ## Listing Favorites 
 The following example requests favorites for a user with an API key.  
@@ -117,7 +114,6 @@ The following example requests removing a favorites.
     "location": "Denver, CO",
     "api_key": "jgn983hy48thw9begh98h4539h4"
   }
-  
 ```
 If your request is approved, You will receive a response that contains remaining favorites and their forecast.  
 Sample response, in JSON:  
@@ -128,22 +124,46 @@ Sample response, in JSON:
     "data": []
 }
 ``` 
-Things you may want to cover:
 
-* Ruby version
+## Set Up Locally 
+### Prerequisites 
+* postgresql database  
+* ruby  
+* ruby on rails  
+Clone the project   
+```
+ git clone git@github.com:manojpanta/SweaterWeather.git
+```
+Enter the directory  
+```
+cd SweaterWeather
+```
+Install gems  
+```
+bundle install
+```
+Create, migrate, and seed  
+```
+bundle exec rake db:{create,migrate,seed}
+```
+Next, Install figaro to create config/applocation.yml file  
+```
+bundle exec figaro install 
+```
+You will need  
+[Geocoding API](https://developers.google.com/maps/documentation/geocoding/get-api-key),  
+[Darksky API](https://darksky.net/dev), and  
+[Flicker API](https://www.flickr.com/services/api/misc.api_keys.html) to run this API service locally.  
+You can set environment variable inside `config/application.yml` like below.  
+```
+GEOCODING_API: "your____api_____key"
+DARK-SKY-API-KEY: "your____api_____key"
+FLICKR-KEY: "your____api_____key"
+```
+Once you set up all the keys as an enviroment variables,  
+Start up server locally  
+```
+rails s
+```
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
