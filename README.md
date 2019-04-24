@@ -8,8 +8,8 @@ User can sign in to their account, create favorites, delete favorites using thei
 You access the SweaterWeather API through an HTTP interface. Following are examples of requests.  
 ## Forecast Lookup
 The following example requests the forecast of  "denver, colorado".  
-https://maps.googleapis.com/maps/api/v1/forecast?location=denver . 
-Make sure your headers has `Content-Type  application/json`  
+https://maps.googleapis.com/maps/api/v1/forecast?location=denver  
+Make sure your headers has `Content-Type  application/json`    
 Below is a sample response forecast lookup, in JSON:  
 
 
