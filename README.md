@@ -36,7 +36,7 @@ The following example requests sign up to the SweaterWeather API.
  POST /api/v1/users 
  Content-Type: application/json
  Accept: application/json
- And the body must contain eamil, password and password_confirmation like below:
+ And the body must contain email, password and password_confirmation like below:
  { 
    "email": "whatever@example.com",
    "password": "password",
@@ -57,7 +57,7 @@ The following example requests sign in to the SweaterWeather API.
 POST /api/v1/sessions
 Content-Type: application/json
 Accept: application/json
-And the body must contain emil, passwordlike below:
+And the body must contain email, passwordlike below:
 {
   "email": "whatever@example.com",
   "password": "password"
@@ -71,6 +71,7 @@ Sample response, in JSON:
 }
 ```
 ## Favoriting Locations
+User can favorite a location by sending body that contains location to favorite and user's api key to POST: `/api/v1/favorites` endpoint.  
 The following example requests favoriting a location.  
 ``` 
   POST /api/v1/favorites
@@ -90,6 +91,7 @@ Sample response, in JSON:
 }
 ```
 ## Listing Favorites 
+User can list all their favorites by sending body that contains their API key to GET: `/api/v1/favorites` endpoint.    
 The following example requests favorites for a user with an API key.  
 ```
   GET /api/v1/favorites
@@ -103,6 +105,7 @@ The following example requests favorites for a user with an API key.
   ```
 If your request is approved you will receive all your favorites along with forecast for each.  
 ## Removing Favorites  
+User can delete their favorite by sending a body that contains location name and their API key to DELETE: `/api/v1/favorites` endpoint.  
 The following example requests removing a favorites.  
 ```
   DELETE /api/v1/favorites
