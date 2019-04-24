@@ -452,21 +452,21 @@ Below is a sample response for forecast lookup, in JSON:\n
 }`
 
 ## Account Creation 
-The following example requests sign up to the SweaterWeather API.__
-`POST /api/v1/users__
- Content-Type: application/json__
- Accept: application/json__
- And the body must contain eamil, password and password_confirmation like below:__
- {__
-   "email": "whatever@example.com",__
-   "password": "password"__
-   "password_confirmation": "password"__
- }`__
-After a successful request for sign up, You will get an API key.__
-Sample response, in JSON:__
-`{__
-  "api_key": "jgn983hy48thw9begh98h4539h4",__
-}`__
+The following example requests sign up to the SweaterWeather API.  
+`POST /api/v1/users . 
+ Content-Type: application/json . 
+ Accept: application/json . 
+ And the body must contain eamil, password and password_confirmation like below:  
+ { . 
+   "email": "whatever@example.com",  
+   "password": "password" . 
+   "password_confirmation": "password" . 
+ }` . 
+After a successful request for sign up, You will get an API key.  
+Sample response, in JSON:  
+`{ . 
+  "api_key": "jgn983hy48thw9begh98h4539h4",  
+}` . 
 
 ## Login
 The following example requests sign in to the SweaterWeather API.
