@@ -16,7 +16,7 @@ The following example requests bacgrounds for  "kathmandu".
 https://maps.googleapis.com/maps/api/v1/backgrounds?location=kathmandu   
 Make sure your headers has `Content-Type  application/json`  
 Below is a sample response for forecast lookup, in JSON:  
-`{  
+```{  
     "data": {  
         "id": "73",  
         "type": "backgrounds",  
@@ -26,7 +26,7 @@ Below is a sample response for forecast lookup, in JSON:
             "location": "kathmandu"  
         }  
     }  
-}`  
+}```
 
 ## Account Creation 
 The following example requests sign up to the SweaterWeather API.<br />
