@@ -12,14 +12,10 @@ The following example requests the forecast of  "denver, colorado".
 https://maps.googleapis.com/maps/api/v1/forecast?location=denver  
 Make sure your headers has `Content-Type  application/json`    
 ## Backgrounds Lookup
-The following example requests bacgrounds for  "kathmandu".
-
-https://maps.googleapis.com/maps/api/v1/backgrounds?location=kathmandu
-
-Make sure your headers has `Content-Type  application/json`
-
-Below is a sample response for forecast lookup, in JSON:\n
-
+The following example requests bacgrounds for  "kathmandu".  
+https://maps.googleapis.com/maps/api/v1/backgrounds?location=kathmandu   
+Make sure your headers has `Content-Type  application/json`  
+Below is a sample response for forecast lookup, in JSON:  
 `{  
     "data": {  
         "id": "73",  
