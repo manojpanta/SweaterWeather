@@ -130,6 +130,8 @@ Sample response, in JSON:
 * postgresql database  
 * ruby  
 * ruby on rails  
+
+
 Clone the project   
 ```
  git clone git@github.com:manojpanta/SweaterWeather.git
@@ -154,7 +156,7 @@ You will need
 [Geocoding API](https://developers.google.com/maps/documentation/geocoding/get-api-key),  
 [Darksky API](https://darksky.net/dev), and  
 [Flicker API](https://www.flickr.com/services/api/misc.api_keys.html) to run this API service locally.  
-You can set environment variable inside `config/application.yml` like below.  
+You must set environment variable inside `config/application.yml` like below.  
 ```
 GEOCODING_API: "your____api_____key"
 DARK-SKY-API-KEY: "your____api_____key"
