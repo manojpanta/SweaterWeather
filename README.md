@@ -6,7 +6,7 @@ User can sign in to their account, create favorites, delete favorites using thei
 
 # Getting Started
 You access the SweaterWeather API through an HTTP interface. Following are examples of requests.  
-Base URL: `localhost:3000`
+Base URL: `https://sweeaterweather.herokuapp.com/`
 ## Forecast Lookup
 The following example requests the forecast of  "denver, colorado".  
 ```
