@@ -421,37 +421,64 @@ Below is a sample response forecast lookup, in JSON:
 }
 `
 ## Backgrounds Lookup
-The following example requests bacgrounds for  "kathmandu".\n
-https://maps.googleapis.com/maps/api/v1/backgrounds?location=kathmandu\n
-Make sure your headers has `Content-Type  application/json`\n
+The following example requests bacgrounds for  "kathmandu".
+
+https://maps.googleapis.com/maps/api/v1/backgrounds?location=kathmandu
+
+Make sure your headers has `Content-Type  application/json`
+
 Below is a sample response for forecast lookup, in JSON:\n
+
 `{
+
     "data": {
+    
         "id": "73",
+        
         "type": "backgrounds",
+        
         "attributes": {
+        
             "image_url": "https://live.staticflickr.com/65535/47651534421_3397dea5b9_b.jpg",
+            
             "id": 73,
+            
             "location": "kathmandu"
+            
         }
+        
     }
+    
 }`
 
 ## Account Creation 
 The following example requests sign up to the SweaterWeather API.
-`POST /api/v1/users`
-Content-Type: application/json
-Accept: application/json
-And the body must contain eamil, password and password_confirmation like below:
-`{
-  "email": "whatever@example.com",
-  "password": "password"
-  "password_confirmation": "password"
-}`
+
+`POST /api/v1/users
+
+ Content-Type: application/json
+
+ Accept: application/json
+ 
+ And the body must contain eamil, password and password_confirmation like below:
+ 
+ {
+ 
+   "email": "whatever@example.com",
+   
+   "password": "password"
+   
+   "password_confirmation": "password"
+   
+ }`
 After a successful request for sign up, You will get an API key.
+
 Sample response, in JSON:
+
 `{
+
   "api_key": "jgn983hy48thw9begh98h4539h4",
+  
 }`
 
 ## Login
