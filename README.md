@@ -421,10 +421,10 @@ Below is a sample response forecast lookup, in JSON:
 }
 `
 ## Backgrounds Lookup
-The following example requests bacgrounds for  "kathmandu".
-https://maps.googleapis.com/maps/api/v1/backgrounds?location=kathmandu
-Make sure your headers has `Content-Type  application/json`
-Below is a sample response for forecast lookup, in JSON:
+The following example requests bacgrounds for  "kathmandu".\n
+https://maps.googleapis.com/maps/api/v1/backgrounds?location=kathmandu\n
+Make sure your headers has `Content-Type  application/json`\n
+Below is a sample response for forecast lookup, in JSON:\n
 `{
     "data": {
         "id": "73",
