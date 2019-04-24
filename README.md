@@ -9,13 +9,20 @@ You access the SweaterWeather API through an HTTP interface. Following are examp
 Base URL: `localhost:3000`
 ## Forecast Lookup
 The following example requests the forecast of  "denver, colorado".  
-https://maps.googleapis.com/maps/api/v1/forecast?location=denver  
-Make sure your headers has `Content-Type  application/json`    
+```
+GET /api/v1/forecast?location=denver,colorado
+Content-Type: application/json
+Accept: application/json
+```
+You will receive a response that contains current, daily, and hourly forecast   
 ## Backgrounds Lookup
-The following example requests bacgrounds for  "kathmandu".  
-https://maps.googleapis.com/maps/api/v1/backgrounds?location=kathmandu   
-Make sure your headers has `Content-Type  application/json`  
-Below is a sample response for forecast lookup, in JSON:  
+The following example requests bacgrounds for  "kathmandu". 
+```
+GET /api/v1/backgrounds?location=kathmandu
+Content-Type: application/json
+Accept: application/json
+```
+Below is a sample response for backgrounds lookup, in JSON:  
 ```
 {  
     "data": {  
@@ -170,5 +177,11 @@ Start up server locally
 ```
 rails s
 ```
-
+## Tests
+SweaterWeather uses RSpec for testing. Run the command below to run full test suite
+```
+bundle exec rspec 
+```
+## Contribute to the project
+Please fork and clone this project, make changes you like, and make a PR.
 
